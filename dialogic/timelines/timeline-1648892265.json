@@ -1,0 +1,38 @@
+{
+	"events": [
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "fade_in",
+				"target_node_path": "ScreenFader"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 0.5
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "fade_out",
+				"target_node_path": "ScreenFader"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"change_scene": "res://src/Scenes/Country1/Countryside1.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1648892265.json",
+		"name": "Home1"
+	}
+}
