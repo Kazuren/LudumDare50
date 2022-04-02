@@ -10,7 +10,7 @@
 			"character": "character-1648885595.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "This truly is a unique case. I've never seen a cse of the immune system eating itself away like this before, but it doesn't look terminal like what your doctors have said."
+			"text": "This truly is a unique case. I've never seen a case of the immune system eating itself away like this before, but it doesn't look terminal like what your doctors have said."
 		},
 		{
 			"character": "character-1648801895.json",
@@ -22,7 +22,7 @@
 			"character": "character-1648885595.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Well [Player], you've come to the right place. I think I can figure out a cure, but there is one issue."
+			"text": "Well [Player], you've come to the right place. While those doctors are puzzled about your condition, I’m no ordinary scientist and this is no ordinary lab. I think I can figure out a cure, but there is one issue."
 		},
 		{
 			"character": "character-1648801895.json",
@@ -79,6 +79,12 @@
 			"text": "Those in the capsule will physically reset to that point of time, but their mind will not. As such, we will reset time as much as we need so I can figure out a cure while we keep your body from destroying itself."
 		},
 		{
+			"character": "character-1648885595.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Your body only has about two days left before you’re beyond the point of saving. I’ll need at least [yellow]four[/color] days before I can engineer a fix to your special case of sepsis."
+		},
+		{
 			"character": "character-1648801895.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -94,18 +100,19 @@
 			"character": "character-1648801895.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I'll do it. [color=#a53030][shake rate=10 level=10]Whatever it takes.[/shake][/color]"
+			"text": "I'll do it. Whatever it takes."
 		},
 		{
 			"character": "character-1648885595.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Good. Come back tomorrow. I need to get this machine up and running first. I'll see you then [Player]."
+			"text": "Good. Come back tomorrow. I need to get this machine up and running first. Consider taking a vacation from that stressful government intelligence job until this gets resolved. I'll see you then [Player]."
 		},
 		{
 			"call_node": {
 				"arguments": [
-
+					"2.0",
+					"The next day..."
 				],
 				"method_name": "fade_in",
 				"target_node_path": "ScreenFader"
@@ -115,7 +122,7 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": true,
-			"wait_seconds": 0.5
+			"wait_seconds": 2
 		},
 		{
 			"call_node": {
@@ -128,7 +135,7 @@
 			"event_id": "dialogic_042"
 		},
 		{
-			"change_scene": "res://src/Scenes/Country1/Countryside1.tscn",
+			"change_scene": "res://src/Scenes/Home1/Home1.tscn",
 			"event_id": "dialogic_041"
 		}
 	],

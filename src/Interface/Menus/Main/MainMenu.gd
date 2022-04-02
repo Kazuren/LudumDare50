@@ -17,7 +17,7 @@ func _ready() -> void:
 
 func _on_PlayButton_pressed() -> void:
 	Audio.stop_music()
-	get_tree().change_scene("res://src/Main.tscn")
+	get_tree().change_scene("res://src/Scenes/Lab1/Lab1.tscn")
 
 
 func _on_SettingsButton_pressed() -> void:

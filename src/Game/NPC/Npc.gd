@@ -1,44 +1,18 @@
 extends Node
 
+var talked: bool = false
 
-var active = false
-
-onready var input_key = $InputKey
-
-export var dialog_timeline: String = ""
+onready var dialogue_begin_node = $DialogueBegin
+onready var label = $Label
+onready var animation_player = $AnimationPlayer
 
 
 func _ready():
-	connect("body_entered", self, "_on_NPC_body_entered")
-	connect("body_exited", self, "_on_NPC_body_exited")
+	label.percent_visible = 0
+	dialogue_begin_node.connect("body_entered", self, "_on_DialogCircle_body_entered")
 
 
-func _process(delta: float) -> void:
-	input_key.visible = active
-
-
-func _unhandled_input(event: InputEvent) -> void:
-	if get_node_or_null("DialogNode") == null:
-		if event.is_action_pressed("interact") and active:
-			Events.emit_signal("game_paused")
-			get_tree().paused = true
-			var dialog = Dialogic.start(dialog_timeline)
-			dialog.pause_mode = Node.PAUSE_MODE_PROCESS
-			dialog.connect("timeline_end", self, "on_Dialog_timeline_end")
-			add_child(dialog)
-
-
-func on_Dialog_timeline_end(timeline_name):
-	yield(get_tree(), "idle_frame")
-	get_tree().paused = false
-	Events.emit_signal("game_resumed")
-
-
-func _on_NPC_body_entered(body) -> void:
-	if body is Player:
-		active = true
-
-
-func _on_NPC_body_exited(body) -> void:
-	if body is Player:
-		active = false
+func _on_DialogCircle_body_entered(body: Node) -> void:
+	if body is Player and !talked:
+		talked = true
+		animation_player.play("BeginDialogue")

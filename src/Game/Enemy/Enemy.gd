@@ -4,7 +4,7 @@ extends KinematicBody2D
 
 export var health: int = 3 setget set_health
 export var speed: int = 100
-export var damage: int = 1
+export var damage: int = 3
 var velocity: Vector2 = Vector2.ZERO
 var gravity: int = 800
 

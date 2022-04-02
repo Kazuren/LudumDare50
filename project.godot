@@ -72,7 +72,7 @@ _global_script_classes=[ {
 "base": "Node2D",
 "class": "Main",
 "language": "GDScript",
-"path": "res://src/Main.gd"
+"path": "res://src/Scenes/Main.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "Player",
@@ -117,7 +117,7 @@ _global_script_class_icons={
 [application]
 
 config/name="LudumDare50"
-run/main_scene="res://src/Scenes/Lab1/Lab1.tscn"
+run/main_scene="res://src/Interface/Menus/Main/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]

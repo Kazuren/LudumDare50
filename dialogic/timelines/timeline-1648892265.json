@@ -1,38 +1,21 @@
 {
 	"events": [
 		{
-			"call_node": {
-				"arguments": [
-
-				],
-				"method_name": "fade_in",
-				"target_node_path": "ScreenFader"
-			},
-			"event_id": "dialogic_042"
+			"character": "character-1648801895.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(…I could’ve slept better last night. I can feel my body weakening by the day. Today’s the day, huh? Feels like it’s been just another ordinary Saturday otherwise. Can’t forget to bring my weapon with me. I know I called off work last night for the next week, but better safe than sorry.)"
 		},
 		{
-			"event_id": "dialogic_023",
-			"hide_dialogbox": true,
-			"wait_seconds": 0.5
-		},
-		{
-			"call_node": {
-				"arguments": [
-
-				],
-				"method_name": "fade_out",
-				"target_node_path": "ScreenFader"
-			},
-			"event_id": "dialogic_042"
-		},
-		{
-			"change_scene": "res://src/Scenes/Country1/Countryside1.tscn",
-			"event_id": "dialogic_041"
+			"character": "character-1648801895.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(I should see [Wife] and [Daughter] before I leave.)"
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
 		"file": "timeline-1648892265.json",
-		"name": "Home1"
+		"name": "Home1-Thought"
 	}
 }
