@@ -1,20 +1,16 @@
 extends Main
 
 
+# Declare member variables here. Examples:
+# var a: int = 2
+# var b: String = "text"
 
+
+# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#PlayerInfo.has_gun = true
-	yield(get_tree().create_timer(0.1), "timeout")
-	Events.emit_signal("game_paused")
-	get_tree().paused = true
-	var dialog = Dialogic.start("City1-Friend")
-	dialog.pause_mode = Node.PAUSE_MODE_PROCESS
-	dialog.connect("timeline_end", self, "on_Dialog_timeline_end")
-	add_child(dialog)
+	pass # Replace with function body.
 
 
-func on_Dialog_timeline_end(timeline_name):
-	yield(get_tree(), "idle_frame")
-	get_tree().paused = false
-	Events.emit_signal("game_resumed")
-
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta: float) -> void:
+#	pass

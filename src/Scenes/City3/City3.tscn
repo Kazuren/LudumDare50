@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Scenes/City3/City3.gd" type="Script" id=1]
 [ext_resource path="res://src/Scenes/Lab4/Lab4.tscn" type="PackedScene" id=2]
@@ -11,6 +11,23 @@
 [ext_resource path="res://Assets/Backgrounds/City/buildings.png" type="Texture" id=9]
 [ext_resource path="res://Assets/arrowpointer.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Backgrounds/City/foreground.png" type="Texture" id=11]
+[ext_resource path="res://src/Game/NPC/Npc.tscn" type="PackedScene" id=12]
+
+[sub_resource type="Animation" id=1]
+resource_name = "BeginDialogue"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
 
 [node name="City" type="Node2D"]
 script = ExtResource( 1 )
@@ -107,6 +124,29 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Enemy2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 988, 292 )
+speed = 150
+
+[node name="Enemy3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1016, 292 )
+health = 1
+speed = 150
+
+[node name="Enemy4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1333, 294 )
+speed = 150
+
+[node name="MailMan" parent="." instance=ExtResource( 12 )]
+position = Vector2( 410, 286 )
+
+[node name="Label" parent="MailMan" index="0"]
+text = "Why do I have to deliver 
+so much mail on a Saturday..."
+
+[node name="AnimationPlayer" parent="MailMan" index="2"]
+anims/BeginDialogue = SubResource( 1 )
+
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 22, 280 )
 
@@ -118,21 +158,4 @@ drag_margin_left = 0.1
 drag_margin_right = 0.1
 editor_draw_drag_margin = true
 
-[node name="Enemy" parent="." instance=ExtResource( 8 )]
-position = Vector2( 412, 293 )
-health = 4
-speed = 150
-
-[node name="Enemy2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 988, 292 )
-health = 1
-speed = 150
-
-[node name="Enemy3" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1016, 292 )
-health = 1
-speed = 150
-
-[node name="Enemy4" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1333, 294 )
-speed = 150
+[editable path="MailMan"]

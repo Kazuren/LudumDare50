@@ -3,7 +3,7 @@ extends Main
 
 
 func _ready() -> void:
-	#PlayerInfo.has_gun = true
+	Audio.stop_music()
 	yield(get_tree().create_timer(0.1), "timeout")
 	Events.emit_signal("game_paused")
 	get_tree().paused = true

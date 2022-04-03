@@ -133,10 +133,6 @@ position = Vector2( 925, 423 )
 health = 1
 speed = 150
 
-[node name="Enemy2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1595, 417 )
-speed = 150
-
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4, 408 )
 

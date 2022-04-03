@@ -1,9 +1,11 @@
 extends Main
 
 
+const MUSIC = preload("res://Assets/Music/home_and_countryside_reset_3.wav")
+
 
 func _ready() -> void:
-	#PlayerInfo.has_gun = true
+	Audio.play_music(MUSIC)
 	yield(get_tree().create_timer(0.1), "timeout")
 	Events.emit_signal("game_paused")
 	get_tree().paused = true

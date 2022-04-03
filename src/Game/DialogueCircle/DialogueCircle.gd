@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if get_node_or_null("DialogNode") == null:
-		if event.is_action_pressed("interact") and active and !talked:
+		if event.is_action_pressed("interact") and active and !talked and visible:
 			if once:
 				talked = true
 			Events.emit_signal("game_paused")

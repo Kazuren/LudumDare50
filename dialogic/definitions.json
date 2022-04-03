@@ -10,12 +10,6 @@
 			"value": "[color=#73bed3]*daughter*[/color]"
 		},
 		{
-			"id": "1648922914-123",
-			"name": "Player",
-			"type": 0,
-			"value": "[color=#cf573c]*player*[/color]"
-		},
-		{
 			"id": "1648923271-989",
 			"name": "yellow",
 			"type": 0,
@@ -26,6 +20,18 @@
 			"name": "Wife",
 			"type": 0,
 			"value": "[color=#df84a5]*wife*[/color]"
+		},
+		{
+			"id": "1648922953-330",
+			"name": "Scientist",
+			"type": 0,
+			"value": "[color=#a8ca58]Carl[/color]"
+		},
+		{
+			"id": "1648965241-294",
+			"name": "Item",
+			"type": 0,
+			"value": "*item*"
 		},
 		{
 			"id": "1648961683-648",
@@ -40,16 +46,16 @@
 			"value": "*tv_show*"
 		},
 		{
-			"id": "1648965241-294",
-			"name": "Item",
+			"id": "1648922914-123",
+			"name": "Player",
 			"type": 0,
-			"value": "*item*"
+			"value": ""
 		},
 		{
-			"id": "1648922953-330",
-			"name": "Scientist",
+			"id": "1648987801-759",
+			"name": "PlayerName",
 			"type": 0,
-			"value": "[color=#a8ca58]Carl[/color]"
+			"value": ""
 		}
 	]
 }

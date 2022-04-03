@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/Scenes/Lab1/Lab1.gd" type="Script" id=1]
 [ext_resource path="res://Assets/TILESET.tres" type="TileSet" id=2]
 [ext_resource path="res://Assets/Backgrounds/lab.png" type="Texture" id=3]
-[ext_resource path="res://src/Game/DialogueCircle/DialogueCircle.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Game/Player/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Game/NPC/Npc.tscn" type="PackedScene" id=7]
 
@@ -40,11 +39,8 @@ __meta__ = {
 [node name="NPC" parent="." instance=ExtResource( 7 )]
 position = Vector2( 393, 406 )
 
-[node name="DialogueCircle" parent="NPC" instance=ExtResource( 4 )]
-dialog_timeline = "Lab1"
-
 [node name="Player" parent="." instance=ExtResource( 6 )]
-position = Vector2( 3, 407 )
+position = Vector2( 336, 406 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 drag_margin_h_enabled = true

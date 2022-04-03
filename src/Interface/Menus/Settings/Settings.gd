@@ -1,19 +1,19 @@
-extends Control
+extends CanvasLayer
 
-onready var close_button: Button = $Background/MarginContainer/VBoxContainer/HBoxContainer2/CloseButton
-onready var exit_button: Button = $Background/MarginContainer/VBoxContainer/HBoxContainer2/ExitButton
+onready var close_button: Button = $Settings/Background/MarginContainer/VBoxContainer/HBoxContainer2/CloseButton
+onready var exit_button: Button = $Settings/Background/MarginContainer/VBoxContainer/HBoxContainer2/ExitButton
 
-onready var fullscreen_btn = $Background/MarginContainer/VBoxContainer/HBoxContainer/FullscreenCheckbox
-onready var vsync_btn = $Background/MarginContainer/VBoxContainer/HBoxContainer/VsyncCheckbox
+onready var fullscreen_btn = $Settings/Background/MarginContainer/VBoxContainer/HBoxContainer/FullscreenCheckbox
+onready var vsync_btn = $Settings/Background/MarginContainer/VBoxContainer/HBoxContainer/VsyncCheckbox
 
-onready var master_volume_slider = $Background/MarginContainer/VBoxContainer/MasterVolumeContainer/HBoxContainer/MasterSlider
-onready var master_volume_value = $Background/MarginContainer/VBoxContainer/MasterVolumeContainer/HBoxContainer/MasterValue
+onready var master_volume_slider = $Settings/Background/MarginContainer/VBoxContainer/MasterVolumeContainer/HBoxContainer/MasterSlider
+onready var master_volume_value = $Settings/Background/MarginContainer/VBoxContainer/MasterVolumeContainer/HBoxContainer/MasterValue
 
-onready var music_volume_slider = $Background/MarginContainer/VBoxContainer/MusicVolumeContainer/HBoxContainer/MusicSlider
-onready var music_volume_value = $Background/MarginContainer/VBoxContainer/MusicVolumeContainer/HBoxContainer/MusicValue
+onready var music_volume_slider = $Settings/Background/MarginContainer/VBoxContainer/MusicVolumeContainer/HBoxContainer/MusicSlider
+onready var music_volume_value = $Settings/Background/MarginContainer/VBoxContainer/MusicVolumeContainer/HBoxContainer/MusicValue
 
-onready var effects_volume_slider = $Background/MarginContainer/VBoxContainer/EffectsVolumeContainer/HBoxContainer/EffectsSlider
-onready var effects_volume_value = $Background/MarginContainer/VBoxContainer/EffectsVolumeContainer/HBoxContainer/EffectsValue
+onready var effects_volume_slider = $Settings/Background/MarginContainer/VBoxContainer/EffectsVolumeContainer/HBoxContainer/EffectsSlider
+onready var effects_volume_value = $Settings/Background/MarginContainer/VBoxContainer/EffectsVolumeContainer/HBoxContainer/EffectsValue
 
 
 func _ready() -> void:

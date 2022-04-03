@@ -1,11 +1,12 @@
 extends Control
 
 const SettingsMenu = preload("res://src/Interface/Menus/Settings/Settings.tscn")
-const MUSIC = preload("res://Assets/Music/mainmenu.wav")
+const MUSIC = preload("res://Assets/Music/title_screen.wav")
+const ChooseNameMenu = preload("res://src/Interface/Menus/ChooseNameMenu/ChooseNameMenu.tscn")
 
-onready var play = $CenterContainer/VBoxContainer/PlayButton
-onready var settings = $CenterContainer/VBoxContainer/SettingsButton
-onready var exit = $CenterContainer/VBoxContainer/Exit
+onready var play = $CenterContainer/VBoxContainer2/VBoxContainer/PlayButton
+onready var settings = $CenterContainer/VBoxContainer2/VBoxContainer/SettingsButton
+onready var exit = $CenterContainer/VBoxContainer2/VBoxContainer/Exit
 
 
 func _ready() -> void:
@@ -18,8 +19,9 @@ func _ready() -> void:
 
 
 func _on_PlayButton_pressed() -> void:
-	Audio.stop_music()
-	get_tree().change_scene("res://src/Scenes/Lab1/Lab1.tscn")
+	ScreenFader.fade_in("1.0")
+	yield(ScreenFader, "animation_finished")
+	get_tree().change_scene("res://src/Interface/Menus/ChooseNameMenu/ChooseNameMenu.tscn")
 
 
 func _on_SettingsButton_pressed() -> void:

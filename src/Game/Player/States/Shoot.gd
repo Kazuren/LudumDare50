@@ -1,6 +1,7 @@
 extends PlayerState
 
 const Bullet = preload("res://src/Game/Player/Bullet.tscn")
+const shoot_effect = preload("res://Assets/SFX/shoot.wav")
 
 
 func enter(data: Dictionary = {}) -> void:
@@ -13,6 +14,7 @@ func change_state() -> void:
 
 
 func shoot() -> void:
+	Audio.play_effect(shoot_effect)
 	var bullet = Bullet.instance()
 	bullet.direction = Vector2(player.looking_direction, 0)
 	if player.looking_direction < 0:

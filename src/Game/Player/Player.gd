@@ -3,6 +3,8 @@ extends KinematicBody2D
 
 signal death
 
+const footstep_effect = preload("res://Assets/SFX/footsteps.wav")
+
 const MOVEMENTS = {
 	"move_left": -1,
 	"move_right": 1
@@ -69,6 +71,8 @@ func _on_Events_game_resumed():
 
 
 func get_xinput() -> int:
+	if !PlayerInfo.can_input:
+		return 0
 	if direction_history.empty():
 		return 0
 	else:
@@ -95,3 +99,7 @@ func hit(damage: int) -> void:
 
 func _on_Hurtbox_timer_timeout():
 	hurtbox.monitoring = true
+
+
+func play_footstep_sound() -> void:
+	Audio.play_effect(footstep_effect)

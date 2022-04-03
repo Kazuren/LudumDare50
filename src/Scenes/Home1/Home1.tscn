@@ -1,19 +1,32 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/Scenes/Home1/Home1.gd" type="Script" id=1]
 [ext_resource path="res://Assets/TILESET.tres" type="TileSet" id=2]
-[ext_resource path="res://src/Game/DialogueCircle/DialogueCircle.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Backgrounds/Home/bg.png" type="Texture" id=3]
 [ext_resource path="res://src/Game/Player/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Game/NPC/Npc.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Assets/Backgrounds/Home/base.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Backgrounds/Home/house.png" type="Texture" id=6]
 [ext_resource path="res://src/Game/SceneChanger/SceneChanger.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Assets/arrowpointer.png" type="Texture" id=8]
 [ext_resource path="res://src/Scenes/Country1/Countryside1.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Game/DialogueArea/DialogueArea.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/Backgrounds/Home/walls.png" type="Texture" id=11]
 
 [node name="Home1" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="Base" type="Sprite" parent="."]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.1, 1 )
+
+[node name="Bg" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 346, 180 )
+texture = ExtResource( 3 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Base" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
 texture = ExtResource( 6 )
 centered = false
 
@@ -39,19 +52,15 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="DialogueCircle" parent="." instance=ExtResource( 3 )]
-position = Vector2( 613, 283 )
+[node name="DialogueArea" parent="." instance=ExtResource( 10 )]
+position = Vector2( 517, 296 )
 dialog_timeline = "Home1-Daughter"
-
-[node name="InputKey" parent="DialogueCircle" index="1"]
-margin_top = -66.0
-margin_bottom = -50.0
 
 [node name="Daughter" parent="." instance=ExtResource( 5 )]
 position = Vector2( 613, 292 )
 
 [node name="Wife" parent="." instance=ExtResource( 5 )]
-position = Vector2( 682, 292 )
+position = Vector2( 681, 291 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 44, 304 )
@@ -69,4 +78,11 @@ editor_draw_drag_margin = true
 position = Vector2( 1296, 304 )
 scene_to_load = ExtResource( 9 )
 
-[editable path="DialogueCircle"]
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+layer = 1
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground2"]
+
+[node name="Base" type="Sprite" parent="ParallaxBackground2/ParallaxLayer3"]
+texture = ExtResource( 11 )
+centered = false

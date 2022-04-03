@@ -14,7 +14,6 @@ var settings = {
 
 
 func _ready() -> void:
-	#pause_mode = Node.PAUSE_MODE_PROCESS
 	load_settings()
 
 

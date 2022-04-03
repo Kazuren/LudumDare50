@@ -1,16 +1,26 @@
 extends Main
 
+const MUSIC = preload("res://Assets/Music/lab.wav")
 
-# Declare member variables here. Examples:
-# var a: int = 2
-# var b: String = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	
+	#PlayerInfo.has_gun = true
+	PlayerInfo.can_input = false
+	ScreenFader.fade_out("1.0")
+	yield(ScreenFader, "animation_finished")
+	PlayerInfo.can_input = true
+	get_tree().paused = true
+	Audio.play_music(MUSIC)
+	Events.emit_signal("game_paused")
+	
+	var dialog = Dialogic.start("Lab1")
+	dialog.pause_mode = Node.PAUSE_MODE_PROCESS
+	dialog.connect("timeline_end", self, "on_Dialog_timeline_end")
+	add_child(dialog)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-#	pass
+func on_Dialog_timeline_end(timeline_name):
+	yield(get_tree(), "idle_frame")
+	get_tree().paused = false
+	Events.emit_signal("game_resumed")
+

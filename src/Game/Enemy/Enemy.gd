@@ -2,6 +2,11 @@ class_name Enemy
 extends KinematicBody2D
 
 signal death
+signal hit
+
+const enemy_death_effect = preload("res://Assets/SFX/enemy-death.wav")
+const enemy_hit_effect = preload("res://Assets/SFX/enemy-hit.wav")
+
 
 export var health: int = 3 setget set_health
 export var speed: int = 100
@@ -39,6 +44,8 @@ func hit(damage) -> void:
 	self.health -= damage
 	animation_player.play("Hit")
 	player = Globals.player
+	emit_signal("hit")
+	Audio.play_effect(enemy_hit_effect)
 
 
 func set_health(value: int) -> void:
@@ -46,7 +53,7 @@ func set_health(value: int) -> void:
 	if health <= 0:
 		emit_signal("death")
 		queue_free()
-
+		Audio.play_effect(enemy_death_effect)
 
 func can_see_player() -> bool:
 	return player != null

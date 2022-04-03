@@ -1,8 +1,8 @@
 {
 	"color": "#ffcf573c",
 	"description": "",
-	"display_name": "",
-	"display_name_bool": false,
+	"display_name": "[PlayerName]",
+	"display_name_bool": true,
 	"id": "character-1648801895.json",
 	"mirror_portraits": false,
 	"name": "Player",

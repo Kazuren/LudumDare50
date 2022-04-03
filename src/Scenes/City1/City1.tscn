@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://src/Scenes/City1/City1.gd" type="Script" id=1]
 [ext_resource path="res://src/Scenes/Lab2/Lab2.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://src/Game/Player/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/TILESET.tres" type="TileSet" id=6]
 [ext_resource path="res://Assets/Backgrounds/City/sky.png" type="Texture" id=7]
+[ext_resource path="res://src/Game/DialogueArea/DialogueArea.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Assets/Backgrounds/City/buildings.png" type="Texture" id=9]
 [ext_resource path="res://Assets/arrowpointer.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Backgrounds/City/foreground.png" type="Texture" id=11]
@@ -140,17 +141,6 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 22, 280 )
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
-smoothing_enabled = true
-drag_margin_left = 0.1
-drag_margin_right = 0.1
-editor_draw_drag_margin = true
-
 [node name="MailMan" parent="." instance=ExtResource( 3 )]
 position = Vector2( 410, 286 )
 
@@ -192,6 +182,21 @@ building the new [building] again…"
 
 [node name="AnimationPlayer" parent="ConstructionWorker" index="2"]
 anims/BeginDialogue = SubResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 22, 280 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+drag_margin_left = 0.1
+drag_margin_right = 0.1
+editor_draw_drag_margin = true
+
+[node name="DialogueArea" parent="." instance=ExtResource( 8 )]
+position = Vector2( 168, 292 )
+dialog_timeline = "City1-Friend"
 
 [editable path="MailMan"]
 [editable path="Woman1"]
