@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Scenes/Home2/Home2.gd" type="Script" id=1]
 [ext_resource path="res://Assets/TILESET.tres" type="TileSet" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://src/Scenes/Country2/Countryside2.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Game/DialogueArea/DialogueArea.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/Backgrounds/Home/house.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Characters/Wife/wifeidle.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Characters/Daughter/daughteridle.png" type="Texture" id=13]
 
 [node name="Home2" type="Node2D"]
 script = ExtResource( 1 )
@@ -56,11 +58,13 @@ __meta__ = {
 position = Vector2( 517, 296 )
 dialog_timeline = "Home2-Daughter"
 
-[node name="Daughter" parent="." instance=ExtResource( 5 )]
-position = Vector2( 613, 292 )
-
 [node name="Wife" parent="." instance=ExtResource( 5 )]
-position = Vector2( 681, 291 )
+position = Vector2( 647, 304 )
+texture = ExtResource( 12 )
+
+[node name="Daughter" parent="." instance=ExtResource( 5 )]
+position = Vector2( 590, 312 )
+texture = ExtResource( 13 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 44, 304 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://src/Scenes/Home3/Home3.gd" type="Script" id=1]
 [ext_resource path="res://Assets/TILESET.tres" type="TileSet" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://src/Scenes/Country3/Countryside3.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Game/DialogueArea/DialogueArea.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/Backgrounds/Home/house.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Characters/Daughter/daughteridle.png" type="Texture" id=12]
 
 [node name="Home3" type="Node2D"]
 script = ExtResource( 1 )
@@ -38,7 +39,8 @@ position = Vector2( 517, 296 )
 dialog_timeline = "Home3-Daughter"
 
 [node name="Daughter" parent="." instance=ExtResource( 5 )]
-position = Vector2( 613, 292 )
+position = Vector2( 590, 312 )
+texture = ExtResource( 12 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 44, 304 )

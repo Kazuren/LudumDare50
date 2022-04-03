@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://src/Scenes/City1/City1.gd" type="Script" id=1]
 [ext_resource path="res://src/Scenes/Lab2/Lab2.tscn" type="PackedScene" id=2]
@@ -11,6 +11,10 @@
 [ext_resource path="res://Assets/Backgrounds/City/buildings.png" type="Texture" id=9]
 [ext_resource path="res://Assets/arrowpointer.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Backgrounds/City/foreground.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Characters/NPCS/worker.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Characters/NPCS/woman_1.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Characters/NPCS/woman_2.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Characters/NPCS/mailman.png" type="Texture" id=15]
 
 [sub_resource type="Animation" id=1]
 resource_name = "BeginDialogue"
@@ -142,7 +146,8 @@ __meta__ = {
 }
 
 [node name="MailMan" parent="." instance=ExtResource( 3 )]
-position = Vector2( 410, 286 )
+position = Vector2( 410, 280 )
+texture = ExtResource( 15 )
 
 [node name="Label" parent="MailMan" index="0"]
 text = "Why do I have to deliver 
@@ -152,9 +157,11 @@ so much mail on a Saturday..."
 anims/BeginDialogue = SubResource( 1 )
 
 [node name="Woman1" parent="." instance=ExtResource( 3 )]
-position = Vector2( 871, 279 )
+position = Vector2( 871, 280 )
+texture = ExtResource( 14 )
 
 [node name="Label" parent="Woman1" index="0"]
+margin_right = 84.0
 text = "Did you see the new episode 
 of [trendy show] this week?"
 
@@ -162,19 +169,19 @@ of [trendy show] this week?"
 anims/BeginDialogue = SubResource( 2 )
 
 [node name="Woman2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 976, 278 )
+position = Vector2( 907, 280 )
+texture = ExtResource( 13 )
 
 [node name="Label" parent="Woman2" index="0"]
 margin_top = -73.0
 margin_bottom = -54.0
-text = "Don't spoil it for me!
-I need to catch up soon..."
 
 [node name="AnimationPlayer" parent="Woman2" index="2"]
 anims/BeginDialogue = SubResource( 3 )
 
 [node name="ConstructionWorker" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1216, 280 )
+texture = ExtResource( 12 )
 
 [node name="Label" parent="ConstructionWorker" index="0"]
 text = "Looks like we’re behind schedule for 

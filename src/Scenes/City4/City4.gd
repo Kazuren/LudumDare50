@@ -1,13 +1,21 @@
 extends Main
 
+const MUSIC = preload("res://Assets/Music/city_reset_3.wav")
 
 onready var daughter = $Daughter
 onready var dialogue_area = $DialogueArea
 
 
 func _ready() -> void:
+	PlayerInfo.has_gun = true
+	Audio.play_music(MUSIC)
+	dialogue_area.connect("dialogue_started", self, "_on_DialogueArea_dialogue_started")
 	dialogue_area.connect("dialogue_finished", self, "_on_DialogueArea_dialogue_finished")
 	daughter.connect("death", self, "_on_Daughter_death")
+
+
+func _on_DialogueArea_dialogue_started() -> void:
+	Audio.stop_music()
 
 
 func _on_DialogueArea_dialogue_finished() -> void:

@@ -1,5 +1,6 @@
 extends Area2D
 
+signal dialogue_started
 signal dialogue_finished
 
 export var dialog_timeline: String = ""
@@ -21,6 +22,7 @@ func _on_DialogueArea_body_entered(body) -> void:
 	if body is Player and !talked:
 		talked = true
 		Events.emit_signal("game_paused")
+		emit_signal("dialogue_started")
 		get_tree().paused = true
 		var dialog = Dialogic.start(dialog_timeline)
 		dialog.pause_mode = Node.PAUSE_MODE_PROCESS
