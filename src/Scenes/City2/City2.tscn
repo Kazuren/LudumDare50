@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://src/Scenes/City2/City2.gd" type="Script" id=1]
 [ext_resource path="res://src/Scenes/Lab3/Lab3.tscn" type="PackedScene" id=2]
@@ -11,6 +11,70 @@
 [ext_resource path="res://Assets/Backgrounds/City/buildings.png" type="Texture" id=9]
 [ext_resource path="res://Assets/arrowpointer.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Backgrounds/City/foreground.png" type="Texture" id=11]
+
+[sub_resource type="Animation" id=1]
+resource_name = "BeginDialogue"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "BeginDialogue"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "BeginDialogue"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "BeginDialogue"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
 
 [node name="City" type="Node2D"]
 script = ExtResource( 1 )
@@ -121,11 +185,46 @@ editor_draw_drag_margin = true
 [node name="MailMan" parent="." instance=ExtResource( 8 )]
 position = Vector2( 410, 286 )
 
+[node name="Label" parent="MailMan" index="0"]
+text = "Why do I have to deliver 
+so much mail on a Saturday..."
+
+[node name="AnimationPlayer" parent="MailMan" index="2"]
+anims/BeginDialogue = SubResource( 1 )
+
 [node name="Woman1" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1038, 279 )
+position = Vector2( 871, 279 )
+
+[node name="Label" parent="Woman1" index="0"]
+text = "Did you see the new episode 
+of [trendy show] this week?"
+
+[node name="AnimationPlayer" parent="Woman1" index="2"]
+anims/BeginDialogue = SubResource( 2 )
 
 [node name="Woman2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1080, 278 )
+position = Vector2( 976, 278 )
+
+[node name="Label" parent="Woman2" index="0"]
+margin_top = -73.0
+margin_bottom = -54.0
+text = "Don't spoil it for me!
+I need to catch up soon..."
+
+[node name="AnimationPlayer" parent="Woman2" index="2"]
+anims/BeginDialogue = SubResource( 3 )
 
 [node name="ConstructionWorker" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1300, 280 )
+position = Vector2( 1216, 280 )
+
+[node name="Label" parent="ConstructionWorker" index="0"]
+text = "Looks like we’re behind schedule for 
+building the new [building] again…"
+
+[node name="AnimationPlayer" parent="ConstructionWorker" index="2"]
+anims/BeginDialogue = SubResource( 4 )
+
+[editable path="MailMan"]
+[editable path="Woman1"]
+[editable path="Woman2"]
+[editable path="ConstructionWorker"]

@@ -1,6 +1,7 @@
 class_name Enemy
 extends KinematicBody2D
 
+signal death
 
 export var health: int = 3 setget set_health
 export var speed: int = 100
@@ -43,6 +44,7 @@ func hit(damage) -> void:
 func set_health(value: int) -> void:
 	health = value
 	if health <= 0:
+		emit_signal("death")
 		queue_free()
 
 

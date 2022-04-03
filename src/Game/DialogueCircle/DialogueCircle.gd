@@ -17,7 +17,7 @@ func _ready():
 
 
 func _process(delta: float) -> void:
-	input_key.visible = active
+	input_key.visible = active and !talked
 
 
 func _unhandled_input(event: InputEvent) -> void:
