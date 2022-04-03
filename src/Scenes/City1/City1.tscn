@@ -1,13 +1,12 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/Scenes/City1/City1.gd" type="Script" id=1]
-[ext_resource path="res://src/Scenes/Lab1/Lab1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Scenes/Lab2/Lab2.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Game/NPC/Npc.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Game/SceneChanger/SceneChanger.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Game/Player/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/TILESET.tres" type="TileSet" id=6]
 [ext_resource path="res://Assets/Backgrounds/City/sky.png" type="Texture" id=7]
-[ext_resource path="res://src/Game/Enemy/Enemy.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Assets/Backgrounds/City/buildings.png" type="Texture" id=9]
 [ext_resource path="res://Assets/arrowpointer.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Backgrounds/City/foreground.png" type="Texture" id=11]
@@ -77,9 +76,6 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="NPC" parent="." instance=ExtResource( 3 )]
-position = Vector2( 905, 279 )
-
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 22, 280 )
 
@@ -91,5 +87,14 @@ drag_margin_left = 0.1
 drag_margin_right = 0.1
 editor_draw_drag_margin = true
 
-[node name="Enemy" parent="." instance=ExtResource( 8 )]
-position = Vector2( 559, 296 )
+[node name="MailMan" parent="." instance=ExtResource( 3 )]
+position = Vector2( 410, 286 )
+
+[node name="Woman1" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1038, 279 )
+
+[node name="Woman2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1080, 278 )
+
+[node name="ConstructionWorker" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1300, 280 )

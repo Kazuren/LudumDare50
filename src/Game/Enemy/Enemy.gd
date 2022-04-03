@@ -5,6 +5,8 @@ extends KinematicBody2D
 export var health: int = 3 setget set_health
 export var speed: int = 100
 export var damage: int = 3
+export var invincible = false
+
 var velocity: Vector2 = Vector2.ZERO
 var gravity: int = 800
 
@@ -14,11 +16,11 @@ onready var player_detection_zone = $PlayerDetectionZone
 onready var hitbox = $HitBox
 onready var animation_player = $AnimationPlayer
 
+
 func _ready() -> void:
 	player_detection_zone.connect("body_entered", self, "_on_PlayerDetectionZone_Body_entered")
 	player_detection_zone.connect("body_exited", self, "_on_PlayerDetectionZone_Body_exited")
 	hitbox.connect("area_entered", self, "_on_Hitbox_Area_entered")
-
 
 
 func _physics_process(delta: float) -> void:
@@ -31,6 +33,8 @@ func _physics_process(delta: float) -> void:
 
 
 func hit(damage) -> void:
+	if invincible:
+		return
 	self.health -= damage
 	animation_player.play("Hit")
 	player = Globals.player

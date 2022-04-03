@@ -18,7 +18,7 @@ extents = Vector2( 7, 26 )
 extents = Vector2( 10, 32 )
 
 [sub_resource type="CircleShape2D" id=4]
-radius = 240.019
+radius = 160.0
 
 [sub_resource type="Animation" id=5]
 resource_name = "Hit"
@@ -56,6 +56,8 @@ tracks/0/keys = {
 collision_layer = 0
 collision_mask = 2
 script = ExtResource( 1 )
+health = 2
+speed = 200
 
 [node name="Sprite" type="Sprite" parent="."]
 material = SubResource( 6 )

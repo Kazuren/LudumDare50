@@ -28,16 +28,28 @@
 			"value": "[color=#df84a5]*wife*[/color]"
 		},
 		{
+			"id": "1648961683-648",
+			"name": "Friend",
+			"type": 0,
+			"value": "[color=#3c5e8b]*friend*[/color]"
+		},
+		{
 			"id": "1648927370-697",
 			"name": "TV Show",
 			"type": 0,
 			"value": "*tv_show*"
 		},
 		{
+			"id": "1648965241-294",
+			"name": "Item",
+			"type": 0,
+			"value": "*item*"
+		},
+		{
 			"id": "1648922953-330",
 			"name": "Scientist",
 			"type": 0,
-			"value": "[color=#a8ca58]*scientist*[/color]"
+			"value": "[color=#a8ca58]Carl[/color]"
 		}
 	]
 }

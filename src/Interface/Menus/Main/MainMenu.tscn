@@ -17,25 +17,28 @@ margin_top = 90.0
 margin_right = 384.0
 margin_bottom = 270.0
 rect_min_size = Vector2( 128, 180 )
+alignment = 1
 
 [node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 12.0
 margin_right = 128.0
-margin_bottom = 32.0
+margin_bottom = 44.0
 rect_min_size = Vector2( 128, 32 )
-size_flags_vertical = 2
+size_flags_vertical = 6
 text = "Play"
 
 [node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 74.0
+margin_top = 73.0
 margin_right = 128.0
-margin_bottom = 106.0
+margin_bottom = 105.0
 rect_min_size = Vector2( 0, 32 )
-size_flags_vertical = 2
+size_flags_vertical = 6
 text = "Settings"
 
 [node name="Exit" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 148.0
+margin_top = 135.0
 margin_right = 128.0
-margin_bottom = 180.0
+margin_bottom = 167.0
 rect_min_size = Vector2( 128, 32 )
+size_flags_vertical = 6
 text = "Exit"

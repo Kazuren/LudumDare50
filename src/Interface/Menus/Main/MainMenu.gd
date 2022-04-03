@@ -13,6 +13,8 @@ func _ready() -> void:
 	play.connect("pressed", self, "_on_PlayButton_pressed")
 	settings.connect("pressed", self, "_on_SettingsButton_pressed")
 	exit.connect("pressed", self, "_on_ExitButton_pressed")
+	if OS.has_feature('JavaScript'):
+		exit.visible = false
 
 
 func _on_PlayButton_pressed() -> void:
