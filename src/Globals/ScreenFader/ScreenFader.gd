@@ -25,7 +25,6 @@ func fade_out(seconds: String = "1") -> void:
 	animation_player.play("FadeOut")
 
 
-
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 	emit_signal("animation_finished")
 	animation_player.playback_speed = 1.0

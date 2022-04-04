@@ -35,5 +35,6 @@ func _on_ConfirmButton_pressed() -> void:
 	ScreenFader.fade_in("1.0")
 	yield(ScreenFader, "animation_finished")
 	Audio.stop_music()
+	Globals.game_started = true
 	get_tree().change_scene("res://src/Scenes/Lab1/Lab1.tscn")
 

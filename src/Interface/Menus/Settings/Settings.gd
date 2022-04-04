@@ -2,6 +2,7 @@ extends CanvasLayer
 
 onready var close_button: Button = $Settings/Background/MarginContainer/VBoxContainer/HBoxContainer2/CloseButton
 onready var exit_button: Button = $Settings/Background/MarginContainer/VBoxContainer/HBoxContainer2/ExitButton
+onready var restart_scene_button: Button = $Settings/Background/MarginContainer/VBoxContainer/HBoxContainer2/RestartSceneButton
 
 onready var fullscreen_btn = $Settings/Background/MarginContainer/VBoxContainer/HBoxContainer/FullscreenCheckbox
 onready var vsync_btn = $Settings/Background/MarginContainer/VBoxContainer/HBoxContainer/VsyncCheckbox
@@ -17,7 +18,8 @@ onready var effects_volume_value = $Settings/Background/MarginContainer/VBoxCont
 
 
 func _ready() -> void:
-	
+	if Globals.game_started:
+		restart_scene_button.visible = true
 	if OS.has_feature('JavaScript'):
 		exit_button.visible = false
 		fullscreen_btn.visible = false
@@ -28,6 +30,7 @@ func _ready() -> void:
 	
 	close_button.connect("pressed", self, "_on_CloseButton_pressed")
 	exit_button.connect("pressed", self, "_on_ExitButton_pressed")
+	restart_scene_button.connect("pressed", self, "_on_RestartSceneButton_pressed")
 	
 	fullscreen_btn.pressed = Settings.settings.fullscreen
 	vsync_btn.pressed = Settings.settings.vsync
@@ -64,6 +67,10 @@ func _on_CloseButton_pressed() -> void:
 
 func _on_ExitButton_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_RestartSceneButton_pressed() -> void:
+	get_tree().reload_current_scene()
 
 
 func _on_FullscreenButton_toggled(button_pressed: bool) -> void:

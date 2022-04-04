@@ -100,7 +100,7 @@
 			"character": "character-1648801895.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I'll do it. [shake rate=5 level=10]Whatever it takes.[/shake]"
+			"text": "I'll do it. [shake rate=4 level=5]Whatever it takes.[/shake]"
 		},
 		{
 			"character": "character-1648885595.json",

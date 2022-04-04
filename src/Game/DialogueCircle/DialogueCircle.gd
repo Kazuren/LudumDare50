@@ -1,5 +1,6 @@
 extends Area2D
 
+signal dialogue_started
 signal interacted
 
 export var dialog_timeline: String = ""
@@ -27,7 +28,10 @@ func _unhandled_input(event: InputEvent) -> void:
 			if once:
 				talked = true
 			Events.emit_signal("game_paused")
+			emit_signal("dialogue_started")
+			input_key.visible = false
 			get_tree().paused = true
+			
 			var dialog = Dialogic.start(dialog_timeline)
 			dialog.pause_mode = Node.PAUSE_MODE_PROCESS
 			dialog.connect("timeline_end", self, "on_Dialog_timeline_end")

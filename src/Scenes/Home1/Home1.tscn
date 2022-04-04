@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://src/Scenes/Home1/Home1.gd" type="Script" id=1]
 [ext_resource path="res://Assets/TILESET.tres" type="TileSet" id=2]
@@ -20,6 +20,15 @@ radius = 22.2036
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 13.0384
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 3.0
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 1.0
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 13.0
 
 [node name="Home1" type="Node2D"]
 script = ExtResource( 1 )
@@ -117,5 +126,44 @@ once = false
 [node name="CollisionShape2D" parent="WifeExtraDialogue" index="0"]
 shape = SubResource( 2 )
 
+[node name="BedInteraction" parent="." instance=ExtResource( 14 )]
+position = Vector2( 15, 302 )
+dialog_timeline = "BedInteraction"
+once = false
+
+[node name="CollisionShape2D" parent="BedInteraction" index="0"]
+shape = SubResource( 3 )
+
+[node name="InputKey" parent="BedInteraction" index="1"]
+margin_top = -24.0
+margin_bottom = -8.0
+
+[node name="EldenRingInteraction" parent="." instance=ExtResource( 14 )]
+position = Vector2( 277, 267 )
+dialog_timeline = "EldenRingInteraction"
+once = false
+
+[node name="CollisionShape2D" parent="EldenRingInteraction" index="0"]
+shape = SubResource( 4 )
+
+[node name="InputKey" parent="EldenRingInteraction" index="1"]
+margin_top = -21.0
+margin_bottom = -5.0
+
+[node name="PomerianInteraction" parent="." instance=ExtResource( 14 )]
+position = Vector2( 415, 262 )
+dialog_timeline = "PomerianInteraction"
+once = false
+
+[node name="CollisionShape2D" parent="PomerianInteraction" index="0"]
+shape = SubResource( 5 )
+
+[node name="InputKey" parent="PomerianInteraction" index="1"]
+margin_top = -53.0
+margin_bottom = -37.0
+
 [editable path="DaughterExtraDialogue"]
 [editable path="WifeExtraDialogue"]
+[editable path="BedInteraction"]
+[editable path="EldenRingInteraction"]
+[editable path="PomerianInteraction"]
