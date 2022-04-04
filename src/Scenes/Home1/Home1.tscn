@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://src/Scenes/Home1/Home1.gd" type="Script" id=1]
 [ext_resource path="res://Assets/TILESET.tres" type="TileSet" id=2]
@@ -29,6 +29,18 @@ radius = 1.0
 
 [sub_resource type="CircleShape2D" id=5]
 radius = 13.0
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 11.1803
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id=8]
+radius = 3.0
+
+[sub_resource type="CircleShape2D" id=9]
+radius = 3.0
 
 [node name="Home1" type="Node2D"]
 script = ExtResource( 1 )
@@ -162,8 +174,56 @@ shape = SubResource( 5 )
 margin_top = -53.0
 margin_bottom = -37.0
 
+[node name="FridgeInteraction" parent="." instance=ExtResource( 14 )]
+position = Vector2( 819, 270 )
+dialog_timeline = "FridgeInteraction"
+once = false
+
+[node name="CollisionShape2D" parent="FridgeInteraction" index="0"]
+shape = SubResource( 6 )
+
+[node name="PhoneInteraction" parent="." instance=ExtResource( 14 )]
+position = Vector2( 962, 306 )
+dialog_timeline = "PhoneInteraction"
+once = false
+
+[node name="CollisionShape2D" parent="PhoneInteraction" index="0"]
+shape = SubResource( 7 )
+
+[node name="InputKey" parent="PhoneInteraction" index="1"]
+margin_top = -23.0
+margin_bottom = -7.0
+
+[node name="TVInteraction" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1043, 276 )
+dialog_timeline = "TVInteraction"
+once = false
+
+[node name="CollisionShape2D" parent="TVInteraction" index="0"]
+shape = SubResource( 8 )
+
+[node name="InputKey" parent="TVInteraction" index="1"]
+margin_top = -35.0
+margin_bottom = -19.0
+
+[node name="LampInteraction" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1108, 284 )
+dialog_timeline = "LampInteraction"
+once = false
+
+[node name="CollisionShape2D" parent="LampInteraction" index="0"]
+shape = SubResource( 9 )
+
+[node name="InputKey" parent="LampInteraction" index="1"]
+margin_top = -39.0
+margin_bottom = -23.0
+
 [editable path="DaughterExtraDialogue"]
 [editable path="WifeExtraDialogue"]
 [editable path="BedInteraction"]
 [editable path="EldenRingInteraction"]
 [editable path="PomerianInteraction"]
+[editable path="FridgeInteraction"]
+[editable path="PhoneInteraction"]
+[editable path="TVInteraction"]
+[editable path="LampInteraction"]

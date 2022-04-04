@@ -40,12 +40,6 @@
 			"value": "My Little Donkey"
 		},
 		{
-			"id": "1648926765-271",
-			"name": "Wife",
-			"type": 0,
-			"value": "[color=#df84a5]Sarah[/color]"
-		},
-		{
 			"id": "1648923271-989",
 			"name": "yellow",
 			"type": 0,
@@ -80,6 +74,12 @@
 			"name": "ScientistName",
 			"type": 0,
 			"value": "Carl"
+		},
+		{
+			"id": "1648926765-271",
+			"name": "Wife",
+			"type": 0,
+			"value": "[color=#df84a5]Sarah[/color]"
 		}
 	]
 }
