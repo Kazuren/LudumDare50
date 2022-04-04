@@ -7,10 +7,19 @@ const shoot_effect = preload("res://Assets/SFX/shoot.wav")
 func enter(data: Dictionary = {}) -> void:
 	player.animation_node.travel("Shoot")
 	player.velocity = Vector2.ZERO
+	player.shooting_buffer.stop()
+
+
+func physics_update(delta: float) -> void:
+	if Input.is_action_just_pressed("shoot"):
+		player.shooting_buffer.start()
 
 
 func change_state() -> void:
-	state_machine.change("Idle")
+	if player.shooting_buffer.is_stopped():
+		state_machine.change("Idle")
+	else:
+		state_machine.change("Shoot")
 
 
 func shoot() -> void:

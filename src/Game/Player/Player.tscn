@@ -383,3 +383,7 @@ one_shot = true
 
 [node name="EffectsAnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Squish = SubResource( 11 )
+
+[node name="ShootingBuffer" type="Timer" parent="."]
+wait_time = 0.35
+one_shot = true

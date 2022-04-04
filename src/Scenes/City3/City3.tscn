@@ -631,6 +631,7 @@ anims/Run = SubResource( 12 )
 
 [node name="Enemy3" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1125, 263 )
+health = 1
 speed = 150
 
 [node name="Sprite" parent="Enemy3" index="0"]

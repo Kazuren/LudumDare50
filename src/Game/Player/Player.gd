@@ -38,6 +38,7 @@ onready var bullet_spawn_point = $BulletSpawnPoint
 onready var bullet_spawn_point_flipped = $BulletSpawnPointFlipped
 onready var hurtbox = $Hurtbox
 onready var hurtbox_timer = $Hurtbox/Timer
+onready var shooting_buffer = $ShootingBuffer
 
 
 func _ready() -> void:
