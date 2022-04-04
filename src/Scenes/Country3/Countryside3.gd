@@ -28,6 +28,8 @@ func _on_DeadWifeInteraction_interacted() -> void:
 	dead_wife_counter += 1
 	if dead_wife_counter > 4:
 		dead_wife_interaction.dialog_timeline = "DeadWifeInteractionAfter5"
+	elif dead_wife_counter > 2:
+		dead_wife_interaction.dialog_timeline = "DeadWifeInteractionAfter3"
 
 
 func _on_FarmerInteraction_dialogue_started() -> void:
