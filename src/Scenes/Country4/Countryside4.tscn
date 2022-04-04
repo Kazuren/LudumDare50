@@ -290,6 +290,10 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Car" parent="." instance=ExtResource( 16 )]
+position = Vector2( 1501, 410 )
+texture = ExtResource( 15 )
+
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4, 408 )
 
@@ -321,9 +325,5 @@ autoplay = "Idle"
 anims/Idle = SubResource( 4 )
 anims/RESET = SubResource( 5 )
 anims/Run = SubResource( 6 )
-
-[node name="Car" parent="." instance=ExtResource( 16 )]
-position = Vector2( 1501, 410 )
-texture = ExtResource( 15 )
 
 [editable path="Enemy2"]

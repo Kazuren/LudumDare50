@@ -70,7 +70,7 @@
 			"character": "character-1648885595.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Well, I am still indebted to you for that time you saved my tail. You see this machine here? It's a prototype of a time machine, a culmination of all underground research on time travel, one that can reset everything back to a certain point in the past, except for those in the capsule."
+			"text": "Well, I am still indebted to you for that time you saved my tail. You see this machine here? It's a prototype of a time machine, a culmination of all current underground research on time travel, one that can reset everything back to a certain point in the past, except for those in the capsule."
 		},
 		{
 			"character": "character-1648885595.json",
@@ -82,13 +82,13 @@
 			"character": "character-1648885595.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Your body only has about two days left before you’re beyond the point of saving. I’ll need at least [yellow]four[/color] days before I can engineer a fix to your special case of sepsis."
+			"text": "Your body only has about [color=#73bed3]two days[/color] left before you’re beyond the point of saving. I’ll need at least [yellow]four days[/color] before I can engineer a fix to your special case of sepsis."
 		},
 		{
 			"character": "character-1648801895.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Is this safe? What about the research you do?"
+			"text": "Is this safe? What about the research on the cure that you worked on?"
 		},
 		{
 			"character": "character-1648885595.json",
@@ -100,13 +100,13 @@
 			"character": "character-1648801895.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I'll do it. Whatever it takes."
+			"text": "I'll do it. [shake rate=5 level=10]Whatever it takes.[/shake]"
 		},
 		{
 			"character": "character-1648885595.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Good. Come back tomorrow. I need to get this machine up and running first. Consider taking a vacation from that stressful government intelligence job until this gets resolved. I'll see you then [Player]."
+			"text": "Good. Come back tomorrow. I need to get this machine up and running first. Consider taking a vacation from that stressful government intelligence job until this gets resolved. I'll see you then, [Player]."
 		},
 		{
 			"call_node": {

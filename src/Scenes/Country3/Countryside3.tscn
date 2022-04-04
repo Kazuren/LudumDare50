@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://src/Scenes/City3/City3.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Scenes/Country3/Countryside3.gd" type="Script" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Assets/Shaders/flash_shader.tres" type="Shader" id=17]
 [ext_resource path="res://Assets/Characters/NPCS/farmer.png" type="Texture" id=18]
 [ext_resource path="res://Assets/Characters/NPCS/car.png" type="Texture" id=19]
+[ext_resource path="res://src/Game/DialogueCircle/DialogueCircle.tscn" type="PackedScene" id=20]
 
 [sub_resource type="Animation" id=1]
 resource_name = "BeginDialogue"
@@ -192,6 +193,9 @@ tracks/3/keys = {
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 ]
 }
+
+[sub_resource type="CircleShape2D" id=8]
+radius = 13.1529
 
 [node name="Countryside" type="Node2D"]
 script = ExtResource( 2 )
@@ -369,9 +373,22 @@ drag_margin_left = 0.1
 drag_margin_right = 0.1
 editor_draw_drag_margin = true
 
+[node name="DeadWifeInteraction" parent="." instance=ExtResource( 20 )]
+position = Vector2( 136, 444 )
+dialog_timeline = "DeadWifeInteraction"
+once = false
+
+[node name="CollisionShape2D" parent="DeadWifeInteraction" index="0"]
+shape = SubResource( 8 )
+
+[node name="InputKey" parent="DeadWifeInteraction" index="1"]
+margin_top = -32.0
+margin_bottom = -16.0
+
 [node name="DeadWifeDialogue" parent="." instance=ExtResource( 12 )]
 position = Vector2( 75, 420 )
 dialog_timeline = "DeadWife"
 
 [editable path="Farmer"]
 [editable path="Enemy"]
+[editable path="DeadWifeInteraction"]

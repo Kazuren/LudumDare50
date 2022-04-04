@@ -1,5 +1,6 @@
 extends Area2D
 
+signal interacted
 
 export var dialog_timeline: String = ""
 export var once: bool = true
@@ -36,6 +37,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func on_Dialog_timeline_end(timeline_name):
 	yield(get_tree(), "idle_frame")
 	get_tree().paused = false
+	emit_signal("interacted")
 	Events.emit_signal("game_resumed")
 
 

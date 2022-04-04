@@ -10,7 +10,7 @@
 			"character": "character-1648906024.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "uuorgh..."
+			"text": "[shake rate=30 level=15][color=#a53030]uuorgh...[/color][/shake]"
 		},
 		{
 			"character": "character-1648801895.json",

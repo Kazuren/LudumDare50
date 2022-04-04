@@ -2,9 +2,8 @@ extends Main
 
 const MUSIC = preload("res://Assets/Music/lab.wav")
 
+
 func _ready() -> void:
-	
-	#PlayerInfo.has_gun = true
 	PlayerInfo.can_input = false
 	ScreenFader.fade_out("1.0")
 	yield(ScreenFader, "animation_finished")

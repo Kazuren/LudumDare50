@@ -182,7 +182,7 @@ texture = ExtResource( 12 )
 
 [node name="Label" parent="ConstructionWorker" index="0"]
 text = "Looks like we’re behind schedule for 
-building the new [building] again…"
+building the new Blockbuster again…"
 
 [node name="AnimationPlayer" parent="ConstructionWorker" index="2"]
 anims/BeginDialogue = SubResource( 4 )
@@ -205,7 +205,7 @@ texture = ExtResource( 14 )
 [node name="Label" parent="Woman1" index="0"]
 margin_right = 84.0
 text = "Did you see the new episode 
-of [trendy show] this week?"
+of Galactic Conflict this week?"
 
 [node name="AnimationPlayer" parent="Woman1" index="2"]
 anims/BeginDialogue = SubResource( 5 )

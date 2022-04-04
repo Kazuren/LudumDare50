@@ -1,7 +1,7 @@
 extends Main
 
 
-const MUSIC = preload("res://Assets/Music/lab_reset3.wav")
+const MUSIC = preload("res://Assets/Music/lab_reset2.wav")
 
 
 func _ready() -> void:

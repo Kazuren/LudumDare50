@@ -10,7 +10,7 @@
 			"character": "character-1648801895.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Well I’m not feeling well to begin with, but also one of my closest friends just died in a freak car accident and his wife and daughter are barely hanging onto life!!"
+			"text": "Well I’m not feeling well to begin with, but also one of my closest friends just crashed his Mustang GT, died violently, and his wife and daughter are barely hanging onto life!!"
 		},
 		{
 			"character": "character-1648885595.json",
@@ -97,7 +97,7 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": true,
-			"wait_seconds": 1
+			"wait_seconds": 2
 		},
 		{
 			"call_node": {
