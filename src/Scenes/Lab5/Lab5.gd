@@ -13,9 +13,12 @@ func _ready() -> void:
 #	dialog.connect("timeline_end", self, "on_Dialog_timeline_end")
 #	add_child(dialog)
 
+#
+#func on_Dialog_timeline_end(timeline_name):
+#	print("test")
+#	yield(get_tree(), "idle_frame")
+#	get_tree().paused = false
+#	Events.emit_signal("game_resumed")
 
-func on_Dialog_timeline_end(timeline_name):
-	yield(get_tree(), "idle_frame")
+func _exit_tree() -> void:
 	get_tree().paused = false
-	Events.emit_signal("game_resumed")
-
