@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://src/Scenes/Home2/Home2.gd" type="Script" id=1]
 [ext_resource path="res://Assets/TILESET.tres" type="TileSet" id=2]
@@ -13,6 +13,13 @@
 [ext_resource path="res://Assets/Backgrounds/Home/house.png" type="Texture" id=11]
 [ext_resource path="res://Assets/Characters/Wife/wifeidle.png" type="Texture" id=12]
 [ext_resource path="res://Assets/Characters/Daughter/daughteridle.png" type="Texture" id=13]
+[ext_resource path="res://src/Game/DialogueCircle/DialogueCircle.tscn" type="PackedScene" id=14]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 22.2036
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 13.0384
 
 [node name="Home2" type="Node2D"]
 script = ExtResource( 1 )
@@ -90,3 +97,22 @@ layer = 1
 [node name="Base" type="Sprite" parent="ParallaxBackground2/ParallaxLayer3"]
 texture = ExtResource( 6 )
 centered = false
+
+[node name="DaughterExtraDialogue" parent="." instance=ExtResource( 14 )]
+position = Vector2( 591, 316 )
+dialog_timeline = "Home2-DaughterExtra"
+once = false
+
+[node name="CollisionShape2D" parent="DaughterExtraDialogue" index="0"]
+shape = SubResource( 1 )
+
+[node name="WifeExtraDialogue" parent="." instance=ExtResource( 14 )]
+position = Vector2( 647, 302 )
+dialog_timeline = "Home2-WifeExtra"
+once = false
+
+[node name="CollisionShape2D" parent="WifeExtraDialogue" index="0"]
+shape = SubResource( 2 )
+
+[editable path="DaughterExtraDialogue"]
+[editable path="WifeExtraDialogue"]

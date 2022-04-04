@@ -76,13 +76,13 @@
 			"character": "character-1648801895.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Okay now what is the progress on that cure?"
+			"text": "Okay, now what is the progress on that cure?"
 		},
 		{
 			"character": "character-1648885595.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Well, I just managed to start synthesis on the serum and it looks very promising. Judging by the looks of it, it should be ready in about 2 more days. So about two more resets give or take. "
+			"text": "Well, I just managed to start synthesis on the serum and it looks very promising. Judging by the looks of it, it should be ready in about [color=#73bed3]two more days[/color]. So about [color=#73bed3]two more resets[/color] give or take. "
 		},
 		{
 			"character": "character-1648885595.json",

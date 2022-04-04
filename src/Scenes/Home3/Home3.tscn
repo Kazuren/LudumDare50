@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://src/Scenes/Home3/Home3.gd" type="Script" id=1]
 [ext_resource path="res://Assets/TILESET.tres" type="TileSet" id=2]
@@ -12,6 +12,10 @@
 [ext_resource path="res://src/Game/DialogueArea/DialogueArea.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/Backgrounds/Home/house.png" type="Texture" id=11]
 [ext_resource path="res://Assets/Characters/Daughter/daughteridle.png" type="Texture" id=12]
+[ext_resource path="res://src/Game/DialogueCircle/DialogueCircle.tscn" type="PackedScene" id=13]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 22.2036
 
 [node name="Home3" type="Node2D"]
 script = ExtResource( 1 )
@@ -70,12 +74,18 @@ motion_scale = Vector2( 0.1, 1 )
 [node name="Bg" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 346, 180 )
 texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Base" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
 texture = ExtResource( 11 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
 layer = 1
@@ -85,3 +95,16 @@ layer = 1
 [node name="Base" type="Sprite" parent="ParallaxBackground2/ParallaxLayer3"]
 texture = ExtResource( 6 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="DaughterExtraDialogue" parent="." instance=ExtResource( 13 )]
+position = Vector2( 591, 316 )
+dialog_timeline = "Home3-DaughterExtra"
+once = false
+
+[node name="CollisionShape2D" parent="DaughterExtraDialogue" index="0"]
+shape = SubResource( 1 )
+
+[editable path="DaughterExtraDialogue"]

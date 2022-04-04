@@ -16,7 +16,13 @@
 			"character": "character-1648801895.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Please tell me his research notes are still here.\n"
+			"text": "Please tell me his research notes are still here."
+		},
+		{
+			"character": "character-1648801895.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "..."
 		},
 		{
 			"character": "character-1648801895.json",
@@ -34,13 +40,50 @@
 			"character": "character-1648801895.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
+			"text": "..."
+		},
+		{
+			"character": "character-1648801895.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
 			"text": "The machine is busted too… I can’t fucking believe this. Please at least let this gun send me to an alternate universe where everyone is still alive. Maybe I can get a cure there. At least let me be able to say goodbye to my family so I can pass in peace."
 		},
 		{
 			"character": "character-1648801895.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
+			"text": "..."
+		},
+		{
+			"character": "character-1648801895.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
 			"text": "The gun is broken… I… I-I… I’m sorry… I’m so sorry [Wife] and [Daughter]… This is all my fault…"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"5.0"
+				],
+				"method_name": "fade_in",
+				"target_node_path": "ScreenFader"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 5
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "fade_out",
+				"target_node_path": "ScreenFader"
+			},
+			"event_id": "dialogic_042"
 		},
 		{
 			"change_scene": "res://src/Interface/Menus/ThanksForPlaying/ThanksForPlaying.tscn",
