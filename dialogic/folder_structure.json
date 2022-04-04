@@ -102,7 +102,31 @@
 						"timeline-1648977312.json"
 					],
 					"folders": {
+						"Extra": {
+							"files": [
 
+							],
+							"folders": {
+
+							},
+							"metadata": {
+								"color": null,
+								"folded": false
+							}
+						},
+						"Optional": {
+							"files": [
+								"timeline-1649052597.json",
+								"timeline-1649052616.json"
+							],
+							"folders": {
+
+							},
+							"metadata": {
+								"color": null,
+								"folded": true
+							}
+						}
 					},
 					"metadata": {
 						"color": null,
